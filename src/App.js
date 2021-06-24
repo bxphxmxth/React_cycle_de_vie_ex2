@@ -13,11 +13,14 @@ class App extends React.Component {
     let jour = this.state.dateCourante.getDate();
     let cMonth =this.state.dateCourante.getMonth() + 1;
     let cYear =this.state.dateCourante.getFullYear();
+    // {this.state.dateCourante.getDate()}/{this.state.dateCourante.getMonth()+1}/{this.state.dateCourante.getFullYear()}
+    let time = this.state.dateCourante.getHours() + ":" + this.state.dateCourante.getMinutes() + ":" + this.state.dateCourante.getSeconds();
+
     
     return (
       <div className="App">
         {/* <p>Il est {this.state.dateCourante}</p> */}
-        <p>{jour}/{cMonth}/{cYear}</p>
+        <p>il est {time}</p>
   
       </div>
     );
